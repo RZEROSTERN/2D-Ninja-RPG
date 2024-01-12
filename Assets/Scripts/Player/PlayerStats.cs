@@ -15,9 +15,18 @@ public class PlayerStats : ScriptableObject
     public float Mana;
     public float MaxMana;
 
+    [Header("XP")]
+    public float CurrentExperience;
+    public float NextLevelExperience;
+    public float InitialNextLevelExperience;
+    [Range(1f, 100f)] public float ExperienceMultiplier;
+
     public void ResetPlayer()
     {
         Health = MaxHealth;
         Mana = MaxMana;
+        Level = 1;
+        CurrentExperience = 0;
+        NextLevelExperience = InitialNextLevelExperience;
     }
 }
