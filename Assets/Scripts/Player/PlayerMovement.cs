@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         actions.Enable();
     }
 
-    private void onDisable()
+    private void OnDisable()
     {
         actions.Disable();
     }
